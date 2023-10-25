@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-require('dotenv').config();
-const cors = require('cors'); 
+const cors = require('cors');
+require('dotenv').config(); 
 
 const port = process.env.PORT;
 
@@ -19,5 +19,10 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
   res.end(`Backend for template eshop`);
 });
+
+// Import the "products" router
+const productsRouter = require('./routes/products');
+
+app.use('/', productsRouter);
 
 module.exports = app;
