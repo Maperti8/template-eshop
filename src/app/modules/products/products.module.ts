@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './components/products/products.component';
 // routing 
 import { ProductsRoutingModule } from './products-routing.module';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
-    ProductsComponent
+    ProductsComponent,
+    ToolbarComponent
   ],
   imports: [
     CommonModule,
